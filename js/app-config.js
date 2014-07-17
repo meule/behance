@@ -5,9 +5,9 @@ $(function () {
 
 	var beUsername = 'gokhanaltinigne',
 		beApiKey = 'PynPRo9HTgL90ktNFI46b4H9Cd17f3Bf',
-		beUserAPI = 'http://www.behance.net/v2/users/' + beUsername + '?callback=?&api_key=' + beApiKey,
+		beUserAPI = '//www.behance.net/v2/users/' + beUsername + '?callback=?&api_key=' + beApiKey,
 		bePerPage = 12,
-		beProjectAPI = 'http://www.behance.net/v2/users/' + beUsername + '/projects?callback=?&api_key=' + beApiKey + '&per_page=' + bePerPage;
+		beProjectAPI = '//www.behance.net/v2/users/' + beUsername + '/projects?callback=?&api_key=' + beApiKey + '&per_page=' + bePerPage;
 
 	////////////////////////
 	// Behance User data //
