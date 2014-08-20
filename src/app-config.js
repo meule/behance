@@ -15,7 +15,7 @@ $(function () {
 			'//54.72.184.190/crime',
 			'//54.72.184.190/religion',
 			'//mayor2013.novayagazeta.ru',
-			'',
+			'//public.tableausoftware.com/profile/konstantin.varik.1625.ru#!/vizhome/shared/C7RP825FM',
 			'//54.72.184.190/wtrade',
 			'',
 			'//daybyday.gaidarfund.ru',
