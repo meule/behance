@@ -6,7 +6,7 @@
 	<title>Behance Portfolio powered by Behance API, Handlebars and jQuery.</title>
 	<meta name="description" content="Learn how to create your portfolio using Behance API, jQuery, Handlebars and Preboot.less.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="src/app.css">
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -16,18 +16,11 @@
 	<div class="wrapper loading">
 
 		<header id="header" class="portfolio-header">
-			<img class="loading-img" src="images/loading-spinning-bubbles.svg" width="64" height="64">
+			<img class="loading-img" src="src/loading-spinning-bubbles.svg" width="64" height="64">
 			<script id="profile-template" type="text/x-handlebars-template">
-			<h1 class="profile-name"><img class="profile-avatar" src="{{user.images.[138]}}" alt="{{user.display_name}}"></h1>
+			<h1 class="profile-name">{{user.display_name}}</h1>
 			<p class="profile-occupation lead">{{user.occupation}}</p>
-			<div class="profile-fields">
-				<ul class="field-list">
-					{{#each user.fields}}
-					<li class="field-item">{{this}}</li>
-					{{/each}}
-				</ul>
-			</div>
-			<div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>
+			<p class="profile-fields">Interactive data visualisations — data mining, design and programming</p>
 			</script>
 		</header>
 
@@ -41,7 +34,7 @@
 							<div class="portfolio-content">
 								<figure class="portfolio-cover" title="{{this.name}}">
 									{{#if this.covers.[404]}}
-									<img class="portfolio-image" src="{{this.covers.[404]}}" width="293" height="229" alt="">{{else}} {{#if this.covers.[230]}}
+									<img class="portfolio-image" src="{{this.covers.[404]}}" width="313" height="244.6" alt="">{{else}} {{#if this.covers.[230]}}
 									<img class="portfolio-image" src="{{this.covers.[230]}}" alt="">{{else}}
 									<img class="portfolio-image" src="{{this.covers.[202]}}" alt="">{{/if}} {{/if}}
 								</figure>
@@ -54,7 +47,7 @@
 											<li class="field-item">{{this}}</li>
 											{{/each}}
 										</ul>
-										<a href="{{this.url}}" class="wpbe-btn" target="_blank">View details</a>
+										<a href="{{this.url}}" class="wpbe-btn" target="_blank">Show me, please</a>
 									</div>
 								</div>
 							</div>
@@ -74,9 +67,9 @@
 		<div id="power" class="power-by">
 			<p>Powered by <a target="_blank" href="http://www.behance.net/" title="Behance">Behance</a>, <a target="_blank" href="http://handlebarsjs.com/">Handlebars</a> and <a target="_blank" href="http://jquery.com/">jQuery</a>.</p>
 			<ul class="social-profiles">
-				<li><a target="_blank" href="//github.com/ThemeAvenue/" class="icon-social-github"></a></li>
-				<li><a target="_blank" href="//twitter.com/theme_avenue" class="icon-social-twitter"></a></li>
-				<li><a target="_blank" href="//www.facebook.com/ThemeAvenue" class="icon-social-facebook"></a></li>
+				<li><a target="_blank" href="//github.com/meule/" class="icon-social-github"></a></li>
+				<li><a target="_blank" href="//twitter.com/vmethods" class="icon-social-twitter"></a></li>
+				<li><a target="_blank" href="//www.facebook.com/varik.ru" class="icon-social-facebook"></a></li>
 				<li><a target="_blank" href="//themeavenue.net/feed/" class="icon-rss"></a></li>
 			</ul>
 		</div>
@@ -84,7 +77,10 @@
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-	<script type="text/javascript" src="js/min/app.min.js"></script>
+
+	<script type="text/javascript" src="src/handlebars-v1.3.0.js"></script>
+	<script type="text/javascript" src="src/handlebars-helpers.js"></script>
+	<script type="text/javascript" src="src/app-config.js"></script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
